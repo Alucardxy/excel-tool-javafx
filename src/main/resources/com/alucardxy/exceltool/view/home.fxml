@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alucardxy.exceltool.controller.HomeController">
+   <children>
+      <VBox layoutX="40.0" layoutY="7.0" prefHeight="376.0" prefWidth="507.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="239.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="textExcel" prefHeight="27.0" prefWidth="349.0" promptText="请选择Excel文件路径" />
+                  <Button mnemonicParsing="false" onAction="#clickOpenExcel" text="打开" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="239.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="textClient" prefHeight="27.0" prefWidth="349.0" promptText="请选择Client路径" />
+                  <Button mnemonicParsing="false" onAction="#clickOpenClient" text="打开" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <TextField fx:id="textServer" prefHeight="27.0" prefWidth="350.0" promptText="请选择Server路径" />
+                  <Button mnemonicParsing="false" onAction="#clickOpenServer" text="打开" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0" alignment="BASELINE_LEFT">
+               <children>
+                  <Label text="导出格式" />
+                  <RadioButton fx:id="radioButtonXml" mnemonicParsing="false" text="XML" onAction="#formatChanged"/>
+                  <RadioButton fx:id="radioButtonJson" mnemonicParsing="false" text="JSON" selected="true" onAction="#formatChanged"/>
+                   <Button mnemonicParsing="false" text="导出" onAction="#clickStart" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <ListView prefHeight="319.0" prefWidth="740.0" fx:id="console"/>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

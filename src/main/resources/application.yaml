@@ -1,0 +1,11 @@
+javafx:
+    title: Excel数据表导出工具
+#    appicons:
+#        - /appicon1.png
+#        - /appicon2.png
+#        - /appicon3.png
+    stage:
+#        width: 800 # defaults to the size of the scene
+#        height: 600
+        resizable: false # defaults to true
+        style: utility # defaults to DECORATED see: javafx.stage.StageStyle
